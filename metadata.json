@@ -1,0 +1,7 @@
+{
+  "name": "Viraliza",
+  "description": "Descobre os pacotes Viraliza para Instagram, TikTok, YouTube e Facebook. Escolhe o teu pacote e fala connosco pelo WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
