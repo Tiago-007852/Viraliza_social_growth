@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { PlatformId } from '../types';
-import { InstagramIcon, TikTokIcon, YouTubeIcon, FacebookIcon, ViralizaBrandMark } from './icons/PlatformIcons';
+import { InstagramIcon, TikTokIcon, YouTubeIcon, FacebookIcon } from './icons/PlatformIcons';
 
 interface ViralizaOrbitProps {
   selectedPlatform: PlatformId;
@@ -130,18 +130,18 @@ export const ViralizaOrbit: React.FC<ViralizaOrbitProps> = ({
       <div
         className="absolute w-56 h-56 rounded-full blur-[70px] pointer-events-none opacity-40 transition-all duration-700"
         style={{
-          background: 'radial-gradient(circle, rgba(168, 85, 247, 0.6) 0%, rgba(236, 72, 153, 0.3) 50%, transparent 80%)',
+          background: 'radial-gradient(circle, rgba(168, 85, 247, 0.5) 0%, rgba(59, 130, 246, 0.3) 40%, rgba(6, 182, 212, 0.2) 70%, transparent 90%)',
         }}
       />
 
       {/* Orbit Rings / Ellipse tracks */}
       <div
-        className="absolute rounded-full border border-purple-500/20 pointer-events-none"
+        className="absolute rounded-full border border-cyan-500/20 pointer-events-none"
         style={{
           width: `${dimensions.rx * 2}px`,
           height: `${dimensions.ry * 2}px`,
           transform: 'rotate(-10deg)',
-          boxShadow: '0 0 25px -5px rgba(168, 85, 247, 0.15)',
+          boxShadow: '0 0 25px -5px rgba(6, 182, 212, 0.15)',
         }}
       />
       <div
@@ -156,7 +156,7 @@ export const ViralizaOrbit: React.FC<ViralizaOrbitProps> = ({
       {/* Central Brand Core "V" */}
       <div
         id="viraliza-central-core"
-        className="relative z-20 flex flex-col items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 border border-white/20 shadow-xl shadow-purple-500/40 cursor-pointer group transition-transform duration-300 hover:scale-105"
+        className="relative z-20 cursor-pointer group transition-transform duration-300 hover:scale-105"
         style={{
           width: `${dimensions.centerSize}px`,
           height: `${dimensions.centerSize}px`,
@@ -164,14 +164,12 @@ export const ViralizaOrbit: React.FC<ViralizaOrbitProps> = ({
         title="Viraliza"
       >
         {/* Core pulsing outer ring */}
-        <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-blue-500/30 animate-pulse pointer-events-none" />
+        <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-cyan-500/30 animate-pulse pointer-events-none" />
 
-        <div className="relative flex items-center justify-center text-white font-black text-2xl drop-shadow-md">
-          V
+        {/* Circular clip container */}
+        <div className="w-full h-full rounded-full overflow-hidden border border-white/20 shadow-xl shadow-cyan-500/40">
+          <img src="/viraliza-logo.png" alt="Viraliza - Social Media Growth" className="w-full h-full object-cover" />
         </div>
-        <span className="text-[9px] font-bold tracking-widest text-white/90 uppercase">
-          VIRALIZA
-        </span>
       </div>
 
       {/* Orbiting Platform Elements */}
@@ -212,12 +210,12 @@ export const ViralizaOrbit: React.FC<ViralizaOrbitProps> = ({
               zIndex,
               opacity,
               borderColor: isCurrentlySelected
-                ? '#EC4899'
+                ? '#06B6D4'
                 : isFront
                 ? 'rgba(255, 255, 255, 0.2)'
                 : 'rgba(255, 255, 255, 0.08)',
               boxShadow: isCurrentlySelected
-                ? `0 0 25px ${item.glowColor}, 0 0 12px rgba(236, 72, 153, 0.5)`
+                ? `0 0 25px ${item.glowColor}, 0 0 12px rgba(6, 182, 212, 0.5)`
                 : isFront
                 ? `0 8px 20px -4px ${item.glowColor}, 0 0 10px rgba(255, 255, 255, 0.06)`
                 : '0 4px 12px rgba(0, 0, 0, 0.4)',
@@ -227,8 +225,8 @@ export const ViralizaOrbit: React.FC<ViralizaOrbitProps> = ({
             {/* Active Indicator Ring */}
             {isCurrentlySelected && (
               <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-pink-500 glow-dot" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500 glow-dot" />
               </span>
             )}
 

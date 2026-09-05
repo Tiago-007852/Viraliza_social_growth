@@ -5,7 +5,6 @@ export interface Platform {
   name: string;
   tagline: string;
   description: string;
-  accentColor: string;
   glowColor: string;
   badge: string;
 }

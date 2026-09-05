@@ -33,9 +33,9 @@ export const Hero: React.FC<HeroProps> = ({
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-medium mb-4 sm:mb-6 max-w-full"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-medium mb-4 sm:mb-6 max-w-full"
             >
-              <span className="w-2 h-2 rounded-full bg-purple-400 glow-dot shrink-0" />
+              <span className="w-2 h-2 rounded-full bg-cyan-400 glow-dot shrink-0" />
               <span className="truncate">Uma plataforma. Todas as tuas redes.</span>
             </motion.div>
 
@@ -57,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
-              className="mt-2.5 sm:mt-3 text-sm sm:text-lg font-medium text-purple-200/90"
+              className="mt-2.5 sm:mt-3 text-sm sm:text-lg font-medium text-cyan-200/90"
             >
               A tua presença digital. Mais alcance. Mais impacto.
             </motion.p>
@@ -84,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({
                 id="hero-cta-primary"
                 type="button"
                 onClick={onStartClick}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 rounded-full font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 shadow-lg shadow-purple-500/25 transition-all transform hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-400 min-h-[48px]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 rounded-full font-semibold text-white bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-500 hover:from-purple-500 hover:via-blue-400 hover:to-cyan-400 shadow-lg shadow-cyan-500/25 transition-all transform hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400 min-h-[48px]"
               >
                 <span>Começar agora</span>
                 <ArrowRight size={18} />

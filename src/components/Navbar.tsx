@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import { ViralizaBrandMark } from './icons/PlatformIcons';
 
 interface NavbarProps {
   onStartClick: () => void;
@@ -54,14 +53,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onStartClick }) => {
           className="flex items-center gap-2.5 sm:gap-3 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-400 rounded-lg p-1"
           aria-label="Viraliza - Página Inicial"
         >
-          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/30 transition-transform duration-300 group-hover:scale-105 text-sm sm:text-base">
-            V
-          </div>
+          <img src="/viraliza-logo.png" alt="Viraliza Logo" className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg object-contain transition-transform duration-300 group-hover:scale-105" />
           <div className="flex flex-col">
             <span className="font-extrabold text-lg sm:text-xl tracking-wider text-white">
               VIRALIZA
             </span>
-            <span className="text-[9px] sm:text-[10px] tracking-widest text-neutral-400 uppercase -mt-1 font-medium">
+            <span className="text-[9px] sm:text-[10px] tracking-widest text-cyan-400 uppercase -mt-1 font-medium">
               Social Growth
             </span>
           </div>

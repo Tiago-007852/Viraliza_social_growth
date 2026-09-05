@@ -16,6 +16,27 @@
   }
 }
 
+/* Offset para navegação com header sticky */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Keyframes para o menu mobile */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
+
 /* Professional Polish Custom Classes */
 .glass-card {
   background: rgba(255, 255, 255, 0.03);
@@ -25,11 +46,11 @@
 }
 
 .gold-card {
-  background: linear-gradient(145deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15));
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.12));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(236, 72, 153, 0.4);
-  box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.12);
 }
 
 .glow-dot {
@@ -41,11 +62,11 @@
 }
 
 .platform-active {
-  background: linear-gradient(to right, #8b5cf6, #ec4899);
+  background: linear-gradient(to right, #7c3aed, #06b6d4);
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #ffffff, #a78bfa);
+  background: linear-gradient(to right, #c084fc, #22d3ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

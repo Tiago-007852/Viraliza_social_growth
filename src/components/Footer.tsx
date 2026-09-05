@@ -1,5 +1,4 @@
 import React from 'react';
-import { ViralizaBrandMark } from './icons/PlatformIcons';
 
 export const Footer: React.FC = () => {
   const links = [
@@ -23,9 +22,7 @@ export const Footer: React.FC = () => {
           {/* Logo & Brand Slogan */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/30">
-                V
-              </div>
+              <img src="/viraliza-logo.png" alt="Viraliza Logo" className="w-9 h-9 rounded-lg object-contain" />
               <span className="font-extrabold text-xl tracking-wider text-white">
                 VIRALIZA
               </span>

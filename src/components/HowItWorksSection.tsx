@@ -8,19 +8,19 @@ export const HowItWorksSection: React.FC = () => {
       number: '01',
       title: 'Escolhe a plataforma',
       description: 'Seleciona Instagram, TikTok, YouTube ou Facebook.',
-      icon: <Smartphone size={24} className="text-purple-400" />,
+      icon: <Smartphone size={24} className="text-cyan-400" />,
     },
     {
       number: '02',
       title: 'Escolhe o pacote',
       description: 'Escolhe o pacote que melhor corresponde ao que procuras.',
-      icon: <PackageCheck size={24} className="text-pink-400" />,
+      icon: <PackageCheck size={24} className="text-blue-400" />,
     },
     {
       number: '03',
       title: 'Fala connosco',
       description: 'Clica em "Comprar agora" e serás direcionado diretamente para o WhatsApp.',
-      icon: <MessageCircle size={24} className="text-emerald-400" />,
+      icon: <MessageCircle size={24} className="text-purple-400" />,
     },
   ];
 
@@ -30,7 +30,7 @@ export const HowItWorksSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-medium mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-medium mb-3">
             <span>Passo a Passo</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -46,7 +46,7 @@ export const HowItWorksSection: React.FC = () => {
           
           {/* Subtle connecting line behind on desktop */}
           <div
-            className="hidden lg:block absolute top-1/2 left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-emerald-500/20 pointer-events-none -translate-y-6"
+            className="hidden lg:block absolute top-1/2 left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 pointer-events-none -translate-y-6"
             aria-hidden="true"
           />
 
@@ -60,7 +60,7 @@ export const HowItWorksSection: React.FC = () => {
               className="relative flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl glass-card hover:border-white/20 transition-all duration-300 group"
             >
               {/* Step Number Tag */}
-              <div className="w-8 h-8 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-sm mb-4">
+              <div className="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-sm mb-4">
                 {step.number}
               </div>
 

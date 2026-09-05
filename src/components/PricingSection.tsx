@@ -4,13 +4,8 @@ import { Users, Heart, ArrowUpRight } from 'lucide-react';
 import { PACKAGES, PLATFORMS } from '../data/config';
 import { PlatformId, PackageItem } from '../types';
 import { formatFollowersCount, formatPrice, getWhatsAppUrl } from '../utils/whatsapp';
-import {
-  InstagramIcon,
-  TikTokIcon,
-  YouTubeIcon,
-  FacebookIcon,
-  WhatsAppIcon,
-} from './icons/PlatformIcons';
+import { getPlatformIcon } from '../utils/platformIcons';
+import { WhatsAppIcon } from './icons/PlatformIcons';
 
 interface PricingSectionProps {
   selectedPlatform: PlatformId;
@@ -22,19 +17,6 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
   onSelectPlatform,
 }) => {
   const currentPlatformObj = PLATFORMS.find((p) => p.id === selectedPlatform) || PLATFORMS[0];
-
-  const getPlatformIcon = (id: PlatformId, size = 18) => {
-    switch (id) {
-      case 'instagram':
-        return <InstagramIcon size={size} />;
-      case 'tiktok':
-        return <TikTokIcon size={size} className="text-white" />;
-      case 'youtube':
-        return <YouTubeIcon size={size} className="text-red-500" />;
-      case 'facebook':
-        return <FacebookIcon size={size} className="text-blue-500" />;
-    }
-  };
 
   const handleBuyClick = (pkg: PackageItem) => {
     const url = getWhatsAppUrl({
@@ -54,7 +36,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-medium mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-medium mb-3">
             <span>Preços Transparentes</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -104,7 +86,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
           {/* Dynamic Active Notice */}
           <div className="mt-3.5 sm:mt-4 flex items-center gap-2 text-xs sm:text-sm font-medium text-neutral-400">
             <span>A apresentar pacotes para:</span>
-            <span className="inline-flex items-center gap-1.5 font-bold text-white px-2.5 sm:px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-xs">
+            <span className="inline-flex items-center gap-1.5 font-bold text-white px-2.5 sm:px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-xs">
               {getPlatformIcon(currentPlatformObj.id, 14)}
               {currentPlatformObj.name}
             </span>
@@ -132,7 +114,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
               >
                 {/* Highlight Badge on popular package */}
                 {isGold && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg whitespace-nowrap z-30">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg whitespace-nowrap z-30">
                     <span>{pkg.highlightText || '🔥 MAIS ESCOLHIDO'}</span>
                   </div>
                 )}
@@ -166,7 +148,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
                   {/* Deliverables List */}
                   <div className="space-y-3.5 mb-6">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300 shrink-0">
+                      <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-300 shrink-0">
                         <Users size={16} />
                       </div>
                       <div className="flex flex-col">
@@ -180,7 +162,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300 shrink-0">
+                      <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-300 shrink-0">
                         <Heart size={16} />
                       </div>
                       <div className="flex flex-col">
@@ -203,7 +185,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
                     onClick={() => handleBuyClick(pkg)}
                     className={`w-full py-2.5 px-4 rounded-xl font-medium text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md focus:outline-none focus:ring-2 min-h-[44px] ${
                       isGold
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white shadow-lg shadow-pink-500/25 focus:ring-pink-300'
+                        ? 'bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-500 hover:from-purple-500 hover:via-blue-400 hover:to-cyan-400 text-white shadow-lg shadow-cyan-500/25 focus:ring-cyan-300'
                         : 'border border-white/10 hover:bg-white/5 text-white focus:ring-purple-400'
                     }`}
                     aria-label={`Comprar pacote ${pkg.name} para ${currentPlatformObj.name} por ${formatPrice(pkg.price)}`}

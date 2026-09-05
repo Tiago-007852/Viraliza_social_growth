@@ -36,7 +36,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#050508] text-neutral-100 selection:bg-purple-600 selection:text-white overflow-x-hidden flex flex-col font-sans">
+    <div className="relative min-h-screen bg-[#050508] text-neutral-100 selection:bg-cyan-600 selection:text-white overflow-x-hidden flex flex-col font-sans">
       {/* Visual Ambient Glows */}
       <BackgroundGlow />
 

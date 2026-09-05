@@ -98,8 +98,8 @@ export const ViralizaBrandMark: React.FC<IconProps> = ({ className = 'w-8 h-8', 
     <defs>
       <linearGradient id="viralizaGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
         <stop stopColor="#A855F7" />
-        <stop offset="0.5" stopColor="#EC4899" />
-        <stop offset="1" stopColor="#3B82F6" />
+        <stop offset="0.4" stopColor="#3B82F6" />
+        <stop offset="1" stopColor="#06B6D4" />
       </linearGradient>
     </defs>
     <rect width="32" height="32" rx="8" fill="#12111A" />
