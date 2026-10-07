@@ -1,8 +1,8 @@
 import { PackageItem, Platform } from '../types';
 
 export const WHATSAPP_CONFIG = {
-  phoneNumber: '244924445652',
-  displayNumber: '+244 924445652',
+  phoneNumber: '351910529868',
+  displayNumber: '+351 910 529 868',
 };
 
 export const PLATFORMS: Platform[] = [

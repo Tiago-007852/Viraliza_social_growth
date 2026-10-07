@@ -1,6 +1,12 @@
 import { WhatsAppMessageConfig } from '../types';
 import { WHATSAPP_CONFIG } from '../data/config';
 
+/**
+ * Número do WhatsApp atualmente configurado no site e nos botões CTA.
+ * Mudar esta constante atualiza todos os links que apontam para o WhatsApp
+ * (pacotes, botões e QR Codes) sem que seja necessário editar várias partes.
+ */
+
 export function formatFollowersCount(count: number): string {
   return new Intl.NumberFormat('pt-PT').format(count);
 }
